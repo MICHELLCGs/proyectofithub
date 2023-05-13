@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>FITHUB</title>
+    </head>
+    <body>
+        <h1>Nuevo Pago</h1>        
+        <hr>
+        <form action="/m_pagos_grabar_nuevo" method="POST">
+            <table>
+                <tr>
+                    <td>Usuario_id:</td>
+                    <td><input type="text" name="xus" id="xus" size="30"></td>
+                </tr>
+                <tr>
+                    <td>Monto:</td>
+                    <td><input type="text" name="xmo" id="xmo" size="30"></td>
+                </tr>
+                <tr>
+                    <td>Fecha:</td>
+                    <td><input type="text" name="xfe" id="xfe" size="30"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Grabar"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
+var xid = req.body['xid' ]*1;
+var xus = req.body['xus'];
+var xmo = req.body['xmo'];
+var xfe = req.body['xfe'];

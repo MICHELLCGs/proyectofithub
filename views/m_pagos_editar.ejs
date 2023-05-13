@@ -1,0 +1,25 @@
+<html>
+    <head><title> FITHUB</title>
+    <body>
+        <H1> Editar Pago </H1>
+        <form method=post action=/m_pagos_grabar_editar>
+            <input type=hidden name=xid id=xid value=<%= pago._id%>>
+            <table border=0>
+                <tr><td>usuario_id:</td><td><input type=number name=xus
+                    id=xus size=10
+                    value='<%= pago.usuario_id%>'></td></tr>
+                <tr><td>Monto:</td><td><input type=number name=xmo
+                    id=xmo size=10
+                    value='<%= pago.monto%>'></td></tr>
+                <tr><td>Fecha:</td><td><input type=text name=xfe
+                    id=xfe size=30
+                    value='<%= pago.fecha%>'></td></tr>
+                <tr><td></td><td><input type = submit value= Grabar></td></tr>
+            </table>
+        </form>
+    </body>
+</html>
+var xid = req.body['xid' ]*1;
+var xus = req.body['xus'];
+var xmo = req.body['xmo'];
+var xfe = req.body['xfe'];

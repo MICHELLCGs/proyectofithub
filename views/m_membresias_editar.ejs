@@ -1,0 +1,18 @@
+<html>
+    <head><title> FITHUB</title>
+    <body>
+        <H1> Editar Membresia </H1>
+        <form method=post action=/m_membresias_grabar_editar>
+            <input type=hidden name=xid id=xid value=<%= membresia._id%>>
+            <table border=0>
+                <tr><td>Nombre:</td><td><input type=text name=xnom
+                    id=xnom size=30
+                    value='<%= membresia.nombre%>'></td></tr>
+                <tr><td>Precio:</td><td><input type=number name=xpr
+                    id=xpr size=10
+                    value='<%= membresia.precio%>'></td></tr>
+                <tr><td></td><td><input type = submit value= Grabar></td></tr>
+            </table>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>FITHUB</title>
+    </head>
+    <body>
+        <h1>Mantenimiento de membresias</h1>
+        <hr>
+        <p><a href="/m_membresias_nuevo">Nueva membresia</a></p>
+        <table border=1>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>PRECIO</th>
+                <th colspan=2>ACCIONES</th>
+            </tr>
+            <% records.forEach( function(membresia) { %>
+                <tr>
+                    <td><%= membresia._id %></td>
+                    <td><%= membresia.nombre %></td>
+                    <td><%= membresia.precio %></td>
+                    <td><a href="/m_membresias_editar/<%= membresia._id %>">Editar</a></td>
+                    <td><a href="/m_membresias_eliminar/<%= membresia._id %>">Eliminar</a></td>
+                </tr>
+            <% }); %>
+        </table>
+    </body>
+</html>

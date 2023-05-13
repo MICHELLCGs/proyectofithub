@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>FITHUB</title>
+    </head>
+    <body>
+        <h1>Pagos</h1>
+        <hr>
+        <p><a href="/m_pagos_nuevo">Nuevo pago</a></p>
+        <table border=1>
+            <tr>
+                <th>ID</th>
+                <th>USUARIO_ID</th>
+                <th>MONTO</th>
+                <th>FECHA</th>
+                <th colspan=2>ACCIONES</th>
+            </tr>
+            <% records.forEach( function(pago) { %>
+                <tr>
+                    <td><%= pago._id %></td>
+                    <td><%= pago.usuario_id %></td>
+                    <td><%= pago.monto %></td>
+                    <td><%= pago.fecha %></td>
+                    <td><a href="/m_pagos_editar/<%= pago._id %>">Editar</a></td>
+                    <td><a href="/m_pagos_eliminar/<%= pago._id %>">Eliminar</a></td>
+                </tr>
+            <% }); %>
+        </table>
+    </body>
+</html>

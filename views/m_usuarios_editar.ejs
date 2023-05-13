@@ -1,0 +1,18 @@
+<html>
+    <head><title> FITHUB</title>
+    <body>
+        <H1> Editar usuario </H1>
+        <form method=post action=/m_usuarios_grabar_editar>
+            <input type=hidden name=xid id=xid value=<%= usuario._id%>>
+            <table border=0>
+                <tr><td>Nombre:</td><td><input type=text name=xnom
+                    id=xnom size=30
+                    value='<%= usuario.nombre%>'></td></tr>
+                <tr><td>Email:</td><td><input type=text name=xem
+                    id=xem size=10
+                    value='<%= usuario.email%>'></td></tr>
+                <tr><td></td><td><input type = submit value= Grabar></td></tr>
+            </table>
+        </form>
+    </body>
+</html>
